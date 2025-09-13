@@ -88,6 +88,15 @@ ffmpeg -y -framerate 15 -i ./renders/mulran_seq00_frames_4k/%06d.png \
   -c:v libx264 -preset slow -crf 16 -pix_fmt yuv420p ./renders/mulran_seq00_1080p.mp4
 ```
 
+
+
+## Demo
+[▶ Watch the full demo (MP4)]([docs/media/mulran_seq00_1080p.mp4](https://github.com/NaderNemati/pointcloud-pipeline-modern/blob/main/mulran_seq00_1080p.mp4))
+
+
+
+
+
 # Why does this look good?
 
 --stable-camera = one robust, quantile-fitted camera for all frames (no zoom jitter).
