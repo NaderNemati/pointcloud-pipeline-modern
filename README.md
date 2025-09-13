@@ -91,7 +91,7 @@ ffmpeg -y -framerate 15 -i ./renders/mulran_seq00_frames_4k/%06d.png \
 
 
 ## Demo
-[▶ Watch the full demo (MP4)]([docs/media/mulran_seq00_1080p.mp4](https://github.com/NaderNemati/pointcloud-pipeline-modern/blob/main/mulran_seq00_1080p.mp4))
+[▶ Watch the full demo (MP4)](mulran_seq00_1080p.mp4)
 
 
 
