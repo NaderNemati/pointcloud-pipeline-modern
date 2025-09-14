@@ -1,4 +1,3 @@
-## Demo
 ![mulran_seq00](mulran_seq00.gif)
 
 
