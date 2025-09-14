@@ -1,3 +1,7 @@
+## Demo
+![mulran_seq00](mulran_seq00.gif)
+
+
 # pointcloud-pipeline-modern
 
 End-to-end LiDAR point-cloud pipeline that runs well on a laptop.
@@ -87,14 +91,6 @@ ffmpeg -y -framerate 15 -i ./renders/mulran_seq00_frames_4k/%06d.png \
   -vf "scale=1920:-2:flags=lanczos" \
   -c:v libx264 -preset slow -crf 16 -pix_fmt yuv420p ./renders/mulran_seq00_1080p.mp4
 ```
-
-
-
-## Demo
-![mulran_seq00](mulran_seq00.gif)
-
-
-
 
 # Why does this look good?
 
