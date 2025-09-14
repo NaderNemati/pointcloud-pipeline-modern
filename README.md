@@ -33,7 +33,20 @@ If Open3D complains about GL on Linux:
 sudo apt install -y libgl1 libegl1 libxext6 libsm6 libglib2.0-0
 ```
 
-#### 2) Dataset layout
+#### 2) Dataset
+
+**MulRan – ParkingLot, an urban LiDAR dataset for place recognition/SLAM, is used** as the primary sequence in this repo. It was recorded with an **Ouster OS1-64** 3D LiDAR and provides time-stamped **`.bin` scans containing (x, y, z, intensity)**; the **file format is identical to KITTI’s Velodyne scan file**, so we can place the files in a KITTI-style folder and use standard loaders. We pick **ParkingLot** because MulRan publishes it as a **small sample sequence** that’s laptop-friendly. For labeled variants, the pipeline is also compatible with **SemanticKITTI**, which keeps the KITTI layout and stores per-point labels in a **32-bit unsigned int** (**low 16 bits = semantic class, high 16 bits = instance id**). :contentReference[oaicite:0]{index=0}
+
+
+- **MulRan – ParkingLot**: [Download Sequences](https://sites.google.com/view/mulran-pr/download)  
+  *(If prompted, use the “Download Request Form” on that page. Files are `.bin` with x,y,z,intensity, identical to KITTI Velodyne format.)*
+
+- **MulRan overview**: [Dataset page](https://sites.google.com/view/mulran-pr/dataset) • [ICRA’20 paper (format details)](https://gisbi-kim.github.io/publications/gkim-2020-icra.pdf)
+
+- **Optional labels (SemanticKITTI)**: [Download & format](https://semantic-kitti.org/dataset.html)  
+  *(32-bit labels per point: lower 16 bits = semantic class, upper 16 bits = instance id.)*
+
+
 This repo expects KITTI-style folders:
 ```python
 data/mulran_parkinglot/sequences/00/
