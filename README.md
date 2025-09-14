@@ -7,6 +7,8 @@ End-to-end LiDAR point-cloud pipeline that runs well on a laptop.
 Pipeline: range-adaptive downsampling → robust ground (CSF by default; Patchwork++ optional) → HDBSCAN clustering → PCA OBBs → high-quality off-screen rendering.
 Datasets: MulRan ParkingLot (Ouster, .bin identical to KITTI Velodyne format) and optional SemanticKITTI labels.
 
+MulRan – ParkingLot, an urban LiDAR dataset for place recognition/SLAM, is used as the source for this animation. It was recorded with an Ouster OS1-64 and released as KITTI-style .bin scans containing (x, y, z, intensity), the format is explicitly identical to KITTI Velodyne, so standard KITTI loaders work out of the box. In your GIF, the scene looks right for ParkingLot: you can see the characteristic ring-like stripes on building façades, dense shrub/treeline blobs, and a largely removed ground plane; colors look like cluster IDs (not raw intensity), which matches the HDBSCAN stage of your pipeline. Overall, the visual content and point density are exactly what we expect from MulRan’s ParkingLot sequence and your processing steps
+
 
 ## Method
 Range-adaptive downsampling (finer near, coarser far) for speed without losing shape.
